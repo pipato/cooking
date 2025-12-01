@@ -1,0 +1,372 @@
+/*
+ * AERYEOK LABS — Winter Operations Theme
+ * Classification: COZY / CLASSIFIED
+ * For use with AL-ATP-001 Protocol Documentation
+ */
+
+/* ═══════════════════════════════════════════════════════════════
+   BASE PALETTE — Winter Warmth
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Primary backgrounds */
+  --al-parchment: #faf6f0;
+  --al-parchment-dark: #f0ebe3;
+  --al-cream: #fffef9;
+  
+  /* Text colors */
+  --al-ink: #2d2a26;
+  --al-ink-soft: #4a4540;
+  --al-ink-muted: #7a756d;
+  
+  /* Accent colors — Korean winter warmth */
+  --al-gochugaru: #c73e1d;      /* Warm red pepper */
+  --al-doenjang: #8b6914;       /* Fermented gold */
+  --al-sesame: #d4a853;         /* Toasted sesame */
+  --al-banchan: #5a7247;        /* Side dish green */
+  --al-winter-sky: #6b8cae;     /* Soft steel blue */
+  
+  /* Callout colors */
+  --al-warning-bg: #fff8f0;
+  --al-warning-border: #e8a87c;
+  --al-success-bg: #f5f9f2;
+  --al-success-border: #8fb573;
+  --al-info-bg: #f5f8fb;
+  --al-info-border: #89a7c4;
+  --al-danger-bg: #fef5f3;
+  --al-danger-border: #d4786a;
+  --al-tip-bg: #fdfbf3;
+  --al-tip-border: #d4a853;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BODY & BACKGROUND
+   ═══════════════════════════════════════════════════════════════ */
+
+.theme-light {
+  --background-primary: var(--al-parchment);
+  --background-secondary: var(--al-parchment-dark);
+  --text-normal: var(--al-ink);
+  --text-muted: var(--al-ink-muted);
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HEADERS — Classified Document Style
+   ═══════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view h1,
+.markdown-rendered h1 {
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  color: var(--al-ink);
+  border-bottom: 2px solid var(--al-doenjang);
+  padding-bottom: 0.5em;
+  letter-spacing: 0.02em;
+}
+
+.markdown-preview-view h2,
+.markdown-rendered h2 {
+  color: var(--al-ink-soft);
+  border-bottom: 1px solid var(--al-sesame);
+  padding-bottom: 0.3em;
+}
+
+.markdown-preview-view h3,
+.markdown-rendered h3 {
+  color: var(--al-doenjang);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CODE BLOCKS — Protocol Styling
+   ═══════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view pre,
+.markdown-rendered pre {
+  background: linear-gradient(135deg, var(--al-parchment-dark) 0%, var(--al-cream) 100%);
+  border: 1px solid var(--al-sesame);
+  border-left: 4px solid var(--al-gochugaru);
+  border-radius: 4px;
+  padding: 1em;
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-size: 0.9em;
+}
+
+.markdown-preview-view code,
+.markdown-rendered code {
+  background: var(--al-parchment-dark);
+  color: var(--al-gochugaru);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CALLOUTS — Warm & Encouraging
+   ═══════════════════════════════════════════════════════════════ */
+
+.callout {
+  border-radius: 8px;
+  border-width: 1px;
+  border-left-width: 4px;
+  box-shadow: 0 2px 8px rgba(45, 42, 38, 0.08);
+}
+
+/* Warning — like gochugaru warmth */
+.callout[data-callout="warning"] {
+  background: var(--al-warning-bg);
+  border-color: var(--al-warning-border);
+}
+
+/* Success — banchan green */
+.callout[data-callout="success"],
+.callout[data-callout="check"] {
+  background: var(--al-success-bg);
+  border-color: var(--al-success-border);
+}
+
+/* Info — winter sky */
+.callout[data-callout="info"],
+.callout[data-callout="abstract"] {
+  background: var(--al-info-bg);
+  border-color: var(--al-info-border);
+}
+
+/* Danger — but soft */
+.callout[data-callout="danger"] {
+  background: var(--al-danger-bg);
+  border-color: var(--al-danger-border);
+}
+
+/* Tip — sesame gold */
+.callout[data-callout="tip"] {
+  background: var(--al-tip-bg);
+  border-color: var(--al-tip-border);
+}
+
+/* Caution — doenjang warmth */
+.callout[data-callout="caution"] {
+  background: #fdf9f0;
+  border-color: var(--al-doenjang);
+}
+
+/* Note — soft and helpful */
+.callout[data-callout="note"] {
+  background: #f8f8f6;
+  border-color: var(--al-ink-muted);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TABLES — Clean Protocol Tables
+   ═══════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view table,
+.markdown-rendered table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.95em;
+}
+
+.markdown-preview-view th,
+.markdown-rendered th {
+  background: var(--al-parchment-dark);
+  color: var(--al-ink);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75em 1em;
+  border-bottom: 2px solid var(--al-doenjang);
+}
+
+.markdown-preview-view td,
+.markdown-rendered td {
+  padding: 0.6em 1em;
+  border-bottom: 1px solid var(--al-sesame);
+}
+
+.markdown-preview-view tr:hover,
+.markdown-rendered tr:hover {
+  background: var(--al-cream);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CHECKBOXES — Protocol Checklists
+   ═══════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view .task-list-item-checkbox,
+.markdown-rendered .task-list-item-checkbox {
+  appearance: none;
+  width: 1.2em;
+  height: 1.2em;
+  border: 2px solid var(--al-doenjang);
+  border-radius: 3px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked,
+.markdown-rendered .task-list-item-checkbox:checked {
+  background: var(--al-banchan);
+  border-color: var(--al-banchan);
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked::after,
+.markdown-rendered .task-list-item-checkbox:checked::after {
+  content: '✓';
+  color: white;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCKQUOTES — Soft emphasis
+   ═══════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view blockquote,
+.markdown-rendered blockquote {
+  border-left: 3px solid var(--al-sesame);
+  background: var(--al-cream);
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  color: var(--al-ink-soft);
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LINKS — Warm navigation
+   ═══════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view a,
+.markdown-rendered a {
+  color: var(--al-doenjang);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--al-sesame);
+  transition: all 0.2s ease;
+}
+
+.markdown-preview-view a:hover,
+.markdown-rendered a:hover {
+  color: var(--al-gochugaru);
+  border-bottom-style: solid;
+}
+
+/* Internal links */
+.internal-link {
+  color: var(--al-winter-sky);
+}
+
+.internal-link:hover {
+  color: var(--al-doenjang);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MERMAID DIAGRAMS
+   ═══════════════════════════════════════════════════════════════ */
+
+.mermaid {
+  background: var(--al-cream);
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px solid var(--al-sesame);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER STYLING
+   ═══════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view footer,
+.markdown-rendered footer {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid var(--al-sesame);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  color: var(--al-ink-muted);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HORIZONTAL RULES — Document dividers
+   ═══════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view hr,
+.markdown-rendered hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--al-sesame) 20%,
+    var(--al-sesame) 80%,
+    transparent
+  );
+  margin: 2em 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SPECIAL CLASSES — Custom elements
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Classification header */
+.classification-header {
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  padding: 0.5em;
+  background: var(--al-parchment-dark);
+  border: 1px solid var(--al-sesame);
+  margin-bottom: 1em;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+}
+
+/* Protocol designation blocks */
+.protocol-designation {
+  font-family: 'JetBrains Mono', monospace;
+  background: linear-gradient(135deg, var(--al-parchment-dark), var(--al-cream));
+  border-left: 4px solid var(--al-gochugaru);
+  padding: 1em;
+  margin: 1em 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PRINT STYLES
+   ═══════════════════════════════════════════════════════════════ */
+
+@media print {
+  body {
+    background: white;
+  }
+  
+  .callout {
+    break-inside: avoid;
+  }
+  
+  table {
+    break-inside: avoid;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SNOWFLAKE ACCENTS (Optional — enable via body class)
+   ═══════════════════════════════════════════════════════════════ */
+
+body.winter-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.3) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.2) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.25) 1px, transparent 1px);
+  background-size: 100px 100px;
+  z-index: -1;
+}

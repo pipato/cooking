@@ -1,0 +1,19 @@
+{
+  "daily-notes:open-today": [
+    {
+      "modifiers": [
+        "Cmd"
+      ],
+      "key": "D"
+    }
+  ],
+  "command-palette:open": [
+    {
+      "modifiers": [
+        "Cmd",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ]
+}

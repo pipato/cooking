@@ -1,0 +1,9 @@
+{
+  "readableLineLength": true,
+  "enabledPlugins": [
+    "file-explorer",
+    "search",
+    "templates",
+    "daily-notes"
+  ]
+}
